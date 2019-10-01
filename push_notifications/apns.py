@@ -70,6 +70,8 @@ def _apns_send(
 			application_id=application_id,
 			use_sandbox=kwargs.get("use_sandbox", None)
 			)
+	if "use_sandbox" in kwargs:
+		del kwargs["use_sandbox"]
 
 	notification_kwargs = {}
 
